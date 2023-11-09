@@ -1,11 +1,11 @@
-const HOME = "/";
-const COTIZATION = "/cotization";
+const HOME = '/'
+const COTIZATION = '/cotization'
 
-export { HOME, COTIZATION };
+export { HOME, COTIZATION }
 
 const routes = [
-  { path: HOME, name: "Inicio" },
-  { path: COTIZATION, name: "Cotizacion" },
-];
+  { path: HOME, name: 'Inicio' },
+  { path: COTIZATION, name: 'Cotizacion' },
+]
 
-export { routes };
+export { routes }
