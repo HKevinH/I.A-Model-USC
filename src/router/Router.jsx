@@ -1,5 +1,5 @@
 import React from 'react'
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { Home } from '../views/home/Home'
 import { Simulation } from '../views/simulation/Simulation'
 import { HOME, SIMULATION } from './routes'
@@ -9,8 +9,7 @@ const AppRouter = () => {
       <Route path={HOME} component={Home} />
       <Route path={SIMULATION} component={Simulation} />
       <Route path="/app" component={Home} />
-      <Redirect from="*" to="/app" />
-      <Redirect from="/" to="/app" />
+      <Route path="/model/model.json" component={'../model/model.json'} />/{' '}
     </Switch>
   )
 }

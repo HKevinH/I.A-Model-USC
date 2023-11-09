@@ -2,6 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import Navbar from '../../components/atoms/nav/Navbar'
 import Section from '../../components/atoms/section/Section'
+import useTensorFlowModel from '../../custom-hooks/useTensorFlowModel'
 import { routes } from '../../router/routes'
 import './home.css'
 const Home = () => {
@@ -9,6 +10,9 @@ const Home = () => {
   const handleRouteChange = (route) => {
     setActiveRoute(route)
   }
+
+  const { model, error, isLoading } = useTensorFlowModel()
+  console.log(model)
   const history = useHistory()
   return (
     <>

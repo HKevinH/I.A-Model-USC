@@ -4,6 +4,7 @@
   "homepage": "https://HkevinH.github.io/I.A-Model-USC/",
   "private": true,
   "dependencies": {
+    "@tensorflow/tfjs": "^4.13.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
