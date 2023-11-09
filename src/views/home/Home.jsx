@@ -1,34 +1,41 @@
-import React, { useState } from "react";
-import "./home.css";
-import Navbar from "../../components/atoms/nav/Navbar";
-import { routes } from "../../router/routes";
-import Section from "../../components/atoms/section/Section";
-import Matrix from "../../components/atoms/matrix/Matrix";
+import React from 'react'
+import { useHistory } from 'react-router-dom'
+import Navbar from '../../components/atoms/nav/Navbar'
+import Section from '../../components/atoms/section/Section'
+import { routes } from '../../router/routes'
+import './home.css'
 const Home = () => {
-  const [activeRoute, setActiveRoute] = useState(Home.path);
-
+  const [activeRoute, setActiveRoute] = React.useState('home')
   const handleRouteChange = (route) => {
-    setActiveRoute(route);
-  };
-
+    setActiveRoute(route)
+  }
+  const history = useHistory()
   return (
     <>
       <Navbar
-        activeRoute={activeRoute}
+        activeRoute={history.location.pathname}
         onRouteChange={handleRouteChange}
         routes={routes}
       />
 
-      <div className="container-slider">
-        <Matrix />
-      </div>
+      <div className="container-slider">{/* <Slider /> */}</div>
       <div className="container-home">
-        <Section title="Section 1" content="test" />
-        <Section title="Section 1" content="test" />
-        <Section title="Section 1" content="test" />
+        <Section
+          title="Inteligencia Artificial"
+          content="Cillum minim pariatur sunt consequat adipisicing quis adipisicing magna.Reprehenderit aute occaecat qui aliquip labore laboris consectetur eiusmod eiusmod dolore reprehenderit."
+        />
+        <Section
+          title="Modelo Prestamos"
+          content="Amet esse incididunt amet et culpa aute non.
+          Adipisicing laborum dolore irure voluptate.Pariatur consequat aliqua ad deserunt labore."
+        />
+        <Section
+          title="Fugiat do quis fugiat sunt eiusmod ex fugiat esse tempor exercitation veniam."
+          content="Incididunt deserunt est dolor pariatur elit qui elit voluptate fugiat. Excepteur occaecat eiusmod officia sunt exercitation minim est qui ipsum voluptate.Id nostrud magna dolor ad enim laborum do proident commodo et et."
+        />
       </div>
     </>
-  );
-};
+  )
+}
 
-export { Home };
+export { Home }

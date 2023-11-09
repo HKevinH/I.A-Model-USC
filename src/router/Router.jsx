@@ -1,24 +1,18 @@
-import React from "react";
-import {
-  Route,
-  createRoutesFromElements,
-  createBrowserRouter,
-} from "react-router-dom";
-import { Home } from "../views/home/Home";
-import { HOME } from "./routes";
-const Router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route
-      element={<Home />}
-      path={HOME}
-      //   loader={async ({ params }) => {
-      //     return fetch(`/fake/api/teams/${params.teamId}.json`);
-      //   }}
-      //   action={async ({ request }) => {
-      //     return updateFakeTeam(await request.formData());
-      //   }}
-      //   errorElement={<ErrorBoundary />}
-    />
+import React from 'react'
+import { Redirect, Route, Switch } from 'react-router-dom'
+import { Home } from '../views/home/Home'
+import { Simulation } from '../views/simulation/Simulation'
+import { HOME, SIMULATION } from './routes'
+const AppRouter = () => {
+  return (
+    <Switch>
+      <Route path={HOME} component={Home} />
+      <Route path={SIMULATION} component={Simulation} />
+      <Route path="/app" component={Home} />
+      <Redirect from="*" to="/app" />
+      <Redirect from="/" to="/app" />
+    </Switch>
   )
-);
-export default Router;
+}
+
+export default AppRouter

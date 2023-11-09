@@ -1,7 +1,10 @@
 const HOME = '/'
+const SIMULATION = '/simulation'
+const SIMULATION_RESULT = '/simulation/result'
+
 const COTIZATION = '/cotization'
 
-export { HOME, COTIZATION }
+export { COTIZATION, HOME, SIMULATION, SIMULATION_RESULT }
 
 const routes = [
   { path: HOME, name: 'Inicio' },
