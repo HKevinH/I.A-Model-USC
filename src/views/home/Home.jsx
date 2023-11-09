@@ -11,6 +11,7 @@ const Home = () => {
     setActiveRoute(route)
   }
 
+  console.log(activeRoute)
   const { model, error, isLoading } = useTensorFlowModel()
   console.log(model)
   const history = useHistory()

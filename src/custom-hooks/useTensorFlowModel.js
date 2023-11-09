@@ -11,19 +11,10 @@ function useTensorFlowModel() {
       try {
         setLoading(true)
 
-        // Realiza la solicitud HTTP para cargar el archivo JSON
-        const response = await fetch('../model/model.json')
-        console.log(response.json())
-        // Comprueba si la solicitud HTTP fue exitosa
-        if (!response.ok) {
-          throw new Error('Error al cargar el modelo TensorFlow')
-        }
-
-        // Convierte el contenido JSON de la respuesta en un objeto
-        const modelConfig = await response
-
         // Carga el modelo TensorFlow a partir de la configuración JSON
-        const model = await tf.loadLayersModel(tf.io.fromMemory(modelConfig))
+        const model = await tf.loadLayersModel(
+          tf.io.fromMemory(require('../model/model.json')),
+        )
 
         if (model && model.predict) {
           console.log('Model has predict method')

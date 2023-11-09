@@ -9,7 +9,11 @@ const AppRouter = () => {
       <Route path={HOME} component={Home} />
       <Route path={SIMULATION} component={Simulation} />
       <Route path="/app" component={Home} />
-      <Route path="/model/model.json" component={'../model/model.json'} />/{' '}
+      <Route
+        path="/model/model.json"
+        component={'../../public/model/model.json'}
+      />
+      /{' '}
     </Switch>
   )
 }
