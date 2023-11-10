@@ -1,0 +1,14 @@
+.btn-Primary {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #c1d9d0;
+    padding: 10px;
+    margin: 20px;
+    font-size: 26px;
+    color: #62455b;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border: none;
+}

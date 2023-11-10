@@ -1,14 +1,15 @@
-const HOME = '/'
+const BASE = '/app'
+const PRINCIPAL_BASE = '/'
 const SIMULATION = '/simulation'
 const SIMULATION_RESULT = '/simulation/result'
 
 const COTIZATION = '/cotization'
 
-export { COTIZATION, HOME, SIMULATION, SIMULATION_RESULT }
+export { BASE, COTIZATION, PRINCIPAL_BASE, SIMULATION, SIMULATION_RESULT }
 
 const routes = [
-  { path: HOME, name: 'Inicio' },
-  { path: COTIZATION, name: 'Cotizacion' },
+  { path: PRINCIPAL_BASE, name: 'Inicio' },
+  { path: SIMULATION, name: 'Simular Credito' },
 ]
 
 export { routes }

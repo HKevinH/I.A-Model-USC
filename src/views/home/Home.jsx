@@ -2,19 +2,18 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import Navbar from '../../components/atoms/nav/Navbar'
 import Section from '../../components/atoms/section/Section'
-import useTensorFlowModel from '../../custom-hooks/useTensorFlowModel'
 import { routes } from '../../router/routes'
 import './home.css'
 const Home = () => {
-  const [activeRoute, setActiveRoute] = React.useState('home')
+  const history = useHistory()
+
+  const [activeRoute, setActiveRoute] = React.useState(
+    history.location.pathname,
+  )
   const handleRouteChange = (route) => {
-    setActiveRoute(route)
+    setActiveRoute(history.push(route))
   }
 
-  console.log(activeRoute)
-  const { model, error, isLoading } = useTensorFlowModel()
-  console.log(model)
-  const history = useHistory()
   return (
     <>
       <Navbar

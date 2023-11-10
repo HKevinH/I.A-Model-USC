@@ -1,5 +1,5 @@
-import React from "react";
-import "./navbar.css";
+import React from 'react'
+import './navbar.css'
 
 const Navbar = ({ activeRoute, onRouteChange, routes }) => {
   return (
@@ -7,12 +7,16 @@ const Navbar = ({ activeRoute, onRouteChange, routes }) => {
       <div className="navbar-title">ASA</div>
       <ul className="navbar-list">
         {routes.map((route) => (
-          <li key={route.path}>
+          <li
+            key={route.path}
+            onClick={() => {
+              onRouteChange(route.path)
+            }}
+          >
             <button
               className={`navbar-item ${
-                activeRoute === route.path ? "active" : ""
+                activeRoute === route.path ? 'active' : ''
               }`}
-              onClick={() => onRouteChange(route.path)}
             >
               {route.name}
             </button>
@@ -20,7 +24,7 @@ const Navbar = ({ activeRoute, onRouteChange, routes }) => {
         ))}
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
