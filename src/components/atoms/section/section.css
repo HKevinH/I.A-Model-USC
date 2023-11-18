@@ -11,11 +11,11 @@
 }
 
 .container-section {
-    display: grid;
+
     color: white;
     background-color: #62455b;
     justify-content: space-around;
-    width: 100%;
+    width: 50%;
     height: 310px;
     border: 2px solid #736681;
 }

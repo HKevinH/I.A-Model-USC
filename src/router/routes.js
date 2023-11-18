@@ -1,6 +1,6 @@
 const BASE = '/app'
 const PRINCIPAL_BASE = '/'
-const SIMULATION = '/simulation'
+const SIMULATION = `${BASE}/simulation`
 const SIMULATION_RESULT = '/simulation/result'
 
 const COTIZATION = '/cotization'

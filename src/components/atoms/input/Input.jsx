@@ -1,5 +1,4 @@
 import React from 'react'
-import './input.css'
 
 const Input = ({ type, placeholder, value, onChange }) => {
   return (
@@ -8,7 +7,7 @@ const Input = ({ type, placeholder, value, onChange }) => {
       placeholder={placeholder}
       value={value || ''}
       onChange={(e) => onChange(e.target.value)}
-      className="custom-input"
+      className="w-full p-2 border border-gray-300 rounded"
     />
   )
 }
