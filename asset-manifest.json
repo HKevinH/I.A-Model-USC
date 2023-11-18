@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/I.A-Model-USC/static/css/main.d40baed2.css",
-    "main.js": "/I.A-Model-USC/static/js/main.82b2b132.js",
+    "main.js": "/I.A-Model-USC/static/js/main.2d295541.js",
     "static/js/787.4f6392fa.chunk.js": "/I.A-Model-USC/static/js/787.4f6392fa.chunk.js",
     "static/media/2.jpg": "/I.A-Model-USC/static/media/2.68c199b2416c9aa694b2.jpg",
     "static/media/1.jpg": "/I.A-Model-USC/static/media/1.6b77925f61c267e664a2.jpg",
@@ -9,11 +9,11 @@
     "static/media/3.jpg": "/I.A-Model-USC/static/media/3.ca76733a202968647111.jpg",
     "index.html": "/I.A-Model-USC/index.html",
     "main.d40baed2.css.map": "/I.A-Model-USC/static/css/main.d40baed2.css.map",
-    "main.82b2b132.js.map": "/I.A-Model-USC/static/js/main.82b2b132.js.map",
+    "main.2d295541.js.map": "/I.A-Model-USC/static/js/main.2d295541.js.map",
     "787.4f6392fa.chunk.js.map": "/I.A-Model-USC/static/js/787.4f6392fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d40baed2.css",
-    "static/js/main.82b2b132.js"
+    "static/js/main.2d295541.js"
   ]
 }
